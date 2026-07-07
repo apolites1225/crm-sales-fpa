@@ -131,7 +131,7 @@ crm-sales-fpa/
 ![Sales Team Performance](images/page2_sales_team_performance.png)
 
 ### Pipeline & Forecast
-![Pipeline & Forecast](images/page3_pipeline_forecast.png)
+![Pipeline & Forecast](images/page3_pipeline_forecast2.png)
 
 ### Data Model — Power BI
 ![Data Model - Power BI](images/powerbi_data_model.png)
