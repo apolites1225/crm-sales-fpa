@@ -125,7 +125,7 @@ crm-sales-fpa/
 ## Dashboard Screenshots
 
 ### Executive Summary
-![Executive Summary](images/page1_executive_summary.png)
+![Executive Summary](images/page1_executive_summary2.png)
 
 ### Sales Team Performance
 ![Sales Team Performance](images/page2_sales_team_performance.png)
