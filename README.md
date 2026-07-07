@@ -1,18 +1,18 @@
 # Maven Tech — FP&A Sales Performance & Pipeline Intelligence Dashboard
 
-Simulating a quarterly business review for a B2B technology company using a multi-table CRM data model built in Excel and Power BI.
+Simulating a quarterly business review for a B2B technology company using a multi-table CRM data model built in Excel and Power BI. The analysis is framed as a budget-vs-actual and variance-to-plan exercise, using sales quotas as the budget baseline.
 
 ## Executive Summary
 
-Maven Tech closed $10.0M in won revenue across 2017, driven primarily by the GTX product series (73.4% of revenue) and the retail sector (18.7% of revenue). Win rates declined from 82.1% in Q1 to 60.3% by Q4, suggesting volume growth came at the cost of sales efficiency. Open pipeline coverage ratio of 0.49x indicates the current funnel may be insufficient to sustain Q4 revenue levels going forward.
+Maven Tech closed $10.0M in won revenue across 2017, driven primarily by the GTX product series (73.4% of revenue) and the retail sector (18.7% of revenue). Win rates declined from 82.1% in Q1 to 60.3% by Q4 — a 21.8-point unfavorable variance — suggesting volume growth came at the cost of sales efficiency. Open pipeline coverage ratio of 0.49x indicates the current funnel may be insufficient to sustain Q4 revenue levels going forward.
 
 ## Business Questions
 
 - How did won revenue trend across quarters in 2017, and what drove the Q2 peak?
-- Which sales agents are above, at, or below quota — and what does the attainment distribution look like across the team?
+- Which sales agents are above, at, or below quota — and what does the attainment (budget vs. actual) distribution look like across the team?
 - Is win rate declining as deal volume increases, suggesting a quality vs. quantity tradeoff?
 - Which product series and customer sectors drive the most revenue — and where is concentration risk highest?
-- Does the current open pipeline provide sufficient coverage to sustain future revenue targets?
+- Does the current open pipeline provide sufficient coverage to sustain future revenue targets, or does it signal forecast risk?
 - What is the total commission expense under a tiered accelerator model, and how does it vary by agent performance?
 
 ## Tools & Skills
@@ -23,6 +23,7 @@ Maven Tech closed $10.0M in won revenue across 2017, driven primarily by the GTX
 - Pivot Tables — 6 analysis tabs covering revenue, win rate, attainment, pipeline, product mix, and account segments
 - Self-engineered quota assumptions table — agent-level quarterly targets built from scratch
 - Commission accelerator model — tiered payout calculation (5% base, 8% above quota) across 35 agents
+- Budget vs. actual / flux analysis — quarterly variance narrative explaining drivers behind win-rate and revenue swings
 
 ### Power BI
 - Star schema data model with 5 tables and 4 active relationships
@@ -78,7 +79,7 @@ The project uses a star schema with sales_pipeline as the central fact table and
 ### Sales Team Performance
 - Darcel Schlecht is the clear outlier at $1,153,214 won revenue — 576% of annual quota
 - Only 1 agent below 75% quota attainment: Violet McLelland at 61.7%
-- Team total attainment: 166.8% against $7M in combined quota
+- Team total attainment: 166.8% against $7M in combined quota — a favorable variance to plan overall, though concentrated in a few top performers
 - Total commission expense: $625,299 (6.25% of won revenue) under a tiered accelerator model (5% base, 8% above quota)
 
 ### Product Mix
@@ -93,8 +94,8 @@ The project uses a star schema with sales_pipeline as the central fact table and
 
 ### Pipeline & Forecast
 - 2,089 open opportunities — 1,589 Engaging, 500 Prospecting
-- Pipeline coverage ratio: 0.49x — below the healthy 3x benchmark, indicating thin forward coverage
-- Weighted pipeline forecast: $1.68M applying stage-based win probabilities (40% Engaging, 15% Prospecting)
+- Pipeline coverage ratio: 0.49x — below the healthy 3x benchmark, indicating thin forward coverage and elevated forecast risk heading into next year
+-  Weighted pipeline forecast: $1.68M applying stage-based win probabilities (40% Engaging, 15% Prospecting)
 
 **Note on Pipeline Coverage Ratio:** The pipeline coverage ratio of 0.49x reflects open opportunity count relative to total annual won deals. This is a directional indicator — a complete coverage analysis would require forward quota targets and estimated deal values on open opportunities, which were not available in this dataset.
 
